@@ -1,0 +1,13 @@
+name: broker
+recipe: laravel
+config:
+  php: '7.4'
+  webroot: ./public
+  database: mariadb
+  xdebug: true
+  config:
+    php: development/lando/php.ini
+services:
+  pma:
+    type: phpmyadmin
+    hosts: database
